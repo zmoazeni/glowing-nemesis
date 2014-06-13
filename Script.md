@@ -15,6 +15,7 @@ Blanka: "Fight? Oh no, man. You're gonna sing. That is, if you ever want to wrap
 **Round 1: SING!**
 
 Narrative: He deftly defeats a bald stranger in a head-to-head Lionel Richie duel.
+
 Lettini singing: "...Hello. Is it me you're looking for?"
 
 #3-battle.png
