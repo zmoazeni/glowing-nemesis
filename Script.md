@@ -51,9 +51,11 @@ Of course not.
 Calling on the powers of Freddie Mercury and his cyclist haven of a homeland, Lettini's mustache grows richly, as Bicycle Race pours from his lips.
 
 #6-end.png
-Lettini: "Wow, I thought I'd never make it out of there. Oh look, that furry green guy is back. Oh, and he's crouching down. I think I'll give him a pat on the head to say thanks..
+Lettini: "Wow, I thought I'd never make it out of there. Oh look, that furry green guy is back. Oh, and he's crouching down. I think I'll give him a pat on the head to say thanks..."
+
 #7-wake-up.png
 
-And then zap! He's shocked back to real life
+And then zap! Lettini's shocked back to real life...
+
 #Top gun photoshop
-or is it?!?!?
+...or is it?!?!?
