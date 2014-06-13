@@ -35,10 +35,10 @@ Lettini singing: danger zone lyrics.
 # 5-final-battle.png
 **Final Round: SING!**
 
-Narrative: After becoming the top gun, Lettini becomes more cocky than usual! The flashing lights of Las Vegas hypnotize him into thinking he can take on the world. He decides Bohemian Rhapsody would be no trouble at all...
+Narrative: After becoming the top gun, Lettini becomes more cocky than usual! The flashing lights of Las Vegas hypnotize him into thinking he can take on the world. He decides Bohemian Rhapsody will be no trouble at all...
 
 #5-final-battle-hurt.png
-...But wait! He can't quite hit those high notes! His opponent cringes Lettini into submission. 
+...but wait! He can't quite hit those high notes! His opponent cringes Lettini into submission. 
 
 # 5-final-battle-takes-it-seriously.png
 Then his opponent takes a victory lap and rips off his shirt for some reason.
@@ -49,7 +49,7 @@ Of course not.
 
 #5-final-battle-takes-it-seriously.png
 
-Calling on the powers of Freddie Mercury and his cyclist haven of a homeland, Lettini's mustache grows richly, as Bicycle Race pours from his lips.
+Calling on the powers of Freddie Mercury and his cyclist haven of a homeland, Lettini's mustache grows richly as Bicycle Race pours from his lips.
 
 #6-end.png
 Lettini: "Wow, I thought I'd never make it out of there. Oh look, that furry green guy is back. Oh, and he's crouching down. I think I'll give him a pat on the head to say thanks..."
