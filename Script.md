@@ -1,4 +1,4 @@
-#Lounging on baot
+#Lounging on boat
 Narrative: Our hero, Lettini, letting his mind drift off, not unlike the boat he's upon, slips into a summertime slumber...
 
 #0-intro.png
