@@ -1,17 +1,14 @@
 <!doctype html>
 <html lang='en'>
 <head>
+  <meta charset="utf-8">
+
   <title>Street Singer</title>
   <link rel="stylesheet" type="text/css" href="css/bookblock.css" />
+  <link rel="stylesheet" type="text/css" href="css/main.css" />
+  <link rel='stylesheet' type='text/css' href='css/csshake.min.css' />
 
   <script src="js/modernizr.custom.js"></script>
-
-  <style>
-  .bb-bookblock {
-    height: 600px;
-    width: 1200px;
-   }
-  </style>
 </head>
 <body>
 
@@ -105,10 +102,10 @@
     </div>
   </div>
 
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="js/jquerypp.custom.js"></script>
   <script src="js/jquery.bookblock.js"></script>
+  <script src="js/cheatcode.js"></script>
   <script>
     $(function() {
       var songList = {
@@ -119,13 +116,25 @@
         20: '.js-song-forever'
       }
 
+      var currentPage = 0;
+
+      var codeList = {
+        5: ['right', 'right', 'down'],
+        8: ['right', 'right', 'down', 'a'],
+        11: ['right', 'up', 'down', 'a', 'b', 'right'],
+        14: ['right', 'left', 'down', 'a', 'b', 'up', 'right', 'a'],
+        18: ['right', 'a', 'up', 'a', 'a', 'up', 'up', 'down', 'b', 'left', 'a'],
+      }
+
       $('#bb-bookblock').bookblock({
         speed : 1000,
         shadowSides : 0.8,
         shadowFlip : 0.4,
 
-        onEndFlip : function(previousPage, currentPage, isLimit) {
-          var song = songList[currentPage];
+        onEndFlip : function(previousPage, newPage, isLimit) {
+          currentPage = newPage;
+
+          var song = songList[newPage];
 
           if (song) {
             $('.js-song').hide();
@@ -137,7 +146,29 @@
       });
 
       $(document).on('click', '.js-next', function() {
-        $('#bb-bookblock').bookblock("next");
+        codes = codeList[currentPage]
+
+        if (codes) {
+          var keys = new Keys(codes, {
+            success: function() {
+              $('#bb-bookblock').bookblock("next");
+            },
+
+            failure: function() {
+              $('.modal').toggleClass('shake');
+
+              setTimeout(function() {
+                $('.modal').removeClass('shake');
+              }, 100);
+
+              keys.prompt();
+            }
+          });
+
+          keys.prompt();
+        } else {
+          $('#bb-bookblock').bookblock("next");
+        }
       });
 
       $(document).on('click', '.js-prev', function() {
