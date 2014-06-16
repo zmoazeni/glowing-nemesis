@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang='en'>
+<head>
+  <title>Street Singer</title>
+  <link rel="stylesheet" type="text/css" href="css/bookblock.css" />
+
+  <script src="js/modernizr.custom.js"></script>
+
+  <style>
+  .bb-bookblock {
+    height: 600px;
+    width: 1200px;
+   }
+  </style>
+</head>
+<body>
+
+  <div id="bb-bookblock" class="bb-bookblock">
+    <div class="bb-item"><img src='img/0.jpg' /></div>
+    <div class="bb-item"><img src='img/1.jpg' /></div>
+    <div class="bb-item"><img src='img/2.jpg' /></div>
+    <div class="bb-item"><img src='img/3.jpg' /></div>
+    <div class="bb-item"><img src='img/4.jpg' /></div>
+    <div class="bb-item"><img src='img/5.jpg' /></div>
+    <div class="bb-item"><img src='img/6.jpg' /></div>
+    <div class="bb-item"><img src='img/7.jpg' /></div>
+    <div class="bb-item"><img src='img/8.jpg' /></div>
+    <div class="bb-item"><img src='img/9.jpg' /></div>
+    <div class="bb-item"><img src='img/10.jpg' /></div>
+    <div class="bb-item"><img src='img/11.jpg' /></div>
+    <div class="bb-item"><img src='img/12.jpg' /></div>
+    <div class="bb-item"><img src='img/13.jpg' /></div>
+    <div class="bb-item"><img src='img/14.jpg' /></div>
+    <div class="bb-item"><img src='img/15.jpg' /></div>
+    <div class="bb-item"><img src='img/16.jpg' /></div>
+    <div class="bb-item"><img src='img/17.jpg' /></div>
+    <div class="bb-item"><img src='img/18.jpg' /></div>
+    <div class="bb-item"><img src='img/19.jpg' /></div>
+    <div class="bb-item"><img src='img/20.jpg' /></div>
+    <div class="bb-item"><img src='img/21.jpg' /></div>
+    <div class="bb-item"><img src='img/22.jpg' /></div>
+    <div class="bb-item"><img src='img/23.jpg' /></div>
+    <div class="bb-item"><img src='img/24.jpg' /></div>
+    <div class="bb-item"><img src='img/25.jpg' /></div>
+    <div class="bb-item"><img src='img/26.jpg' /></div>
+
+    <div class="bb-item">
+      <h2>Happy Birthday Lettini!</h2>
+
+      <h3>Special thanks to:</h3>
+      <ul>
+        <li>Christopher</li>
+        <li>Calina</li>
+        <li>Arun</li>
+        <li>Patrick</li>
+      </ul>
+
+    </div>
+  </div>
+
+  <div style='margin-top: 100px'>
+    <button type="button" class="js-prev">
+      <--
+    </button>
+
+
+    <button type="button" class="js-next">
+      -->
+    </button>
+  </div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="js/jquerypp.custom.js"></script>
+  <script src="js/jquery.bookblock.js"></script>
+  <script>
+    $(function() {
+      $('#bb-bookblock').bookblock({
+        speed : 1000,
+        shadowSides : 0.8,
+        shadowFlip : 0.4
+      });
+
+      $(document).on('click', '.js-next', function() {
+        $('#bb-bookblock').bookblock("next");
+      });
+
+      $(document).on('click', '.js-prev', function() {
+        $('#bb-bookblock').bookblock("prev");
+      });
+    })
+  </script>
+</body>
+</html>
