@@ -49,6 +49,7 @@
     document.body.appendChild(this.overlay);
     var keys = this;
     this.unbind = on(document, 'keydown', function(event) {
+      event.preventDefault();
       keys.check(event.keyCode);
     });
   };
