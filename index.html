@@ -17,20 +17,30 @@
 
   <div id="bb-bookblock" class="bb-bookblock">
     <div class="bb-item"><img src='img/0.jpg' /></div>
+
+    <!-- blanka -->
     <div class="bb-item"><img src='img/1.jpg' /></div>
     <div class="bb-item"><img src='img/2.jpg' /></div>
     <div class="bb-item"><img src='img/3.jpg' /></div>
     <div class="bb-item"><img src='img/4.jpg' /></div>
     <div class="bb-item"><img src='img/5.jpg' /></div>
+
+    <!-- sagat -->
     <div class="bb-item"><img src='img/6.jpg' /></div>
     <div class="bb-item"><img src='img/7.jpg' /></div>
     <div class="bb-item"><img src='img/8.jpg' /></div>
+
+    <!-- zangief -->
     <div class="bb-item"><img src='img/9.jpg' /></div>
     <div class="bb-item"><img src='img/10.jpg' /></div>
     <div class="bb-item"><img src='img/11.jpg' /></div>
+
+    <!-- guile -->
     <div class="bb-item"><img src='img/12.jpg' /></div>
     <div class="bb-item"><img src='img/13.jpg' /></div>
     <div class="bb-item"><img src='img/14.jpg' /></div>
+
+    <!-- balrog -->
     <div class="bb-item"><img src='img/15.jpg' /></div>
     <div class="bb-item"><img src='img/16.jpg' /></div>
     <div class="bb-item"><img src='img/17.jpg' /></div>
@@ -39,9 +49,13 @@
     <div class="bb-item"><img src='img/20.jpg' /></div>
     <div class="bb-item"><img src='img/21.jpg' /></div>
     <div class="bb-item"><img src='img/22.jpg' /></div>
+
+    <!-- blanka -->
     <div class="bb-item"><img src='img/23.jpg' /></div>
     <div class="bb-item"><img src='img/24.jpg' /></div>
     <div class="bb-item"><img src='img/25.jpg' /></div>
+
+    <!-- end -->
     <div class="bb-item"><img src='img/26.jpg' /></div>
 
     <div class="bb-item">
@@ -69,16 +83,57 @@
     </button>
   </div>
 
+  <div id='js-songs'>
+    <div class='js-song js-song-hello' style='display: none'>
+      <iframe width="400" height="80" src="https://rd.io/i/QEV5K6kpJQ/" frameborder="0"></iframe>
+    </div>
+
+    <div class='js-song js-song-feeling' style='display: none'>
+      <iframe width="400" height="80" src="https://rd.io/i/QEV5K1tCyA/" frameborder="0"></iframe>
+    </div>
+
+    <div class='js-song js-song-danger' style='display: none'>
+      <iframe width="400" height="80" src="https://rd.io/i/QEV5K294Jg/" frameborder="0"></iframe>
+    </div>
+
+    <div class='js-song js-song-bohemian' style='display: none'>
+      <iframe width="400" height="80" src="https://rd.io/i/QEV5KwQyZw/" frameborder="0"></iframe>
+    </div>
+
+    <div class='js-song js-song-forever' style='display: none'>
+      <iframe width="400" height="80" src="https://rd.io/i/QEV5K0Fv30c/" frameborder="0"></iframe>
+    </div>
+  </div>
+
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="js/jquerypp.custom.js"></script>
   <script src="js/jquery.bookblock.js"></script>
   <script>
     $(function() {
+      var songList = {
+        7:  '.js-song-hello',
+        10: '.js-song-feeling',
+        13: '.js-song-danger',
+        16: '.js-song-bohemian',
+        20: '.js-song-forever'
+      }
+
       $('#bb-bookblock').bookblock({
         speed : 1000,
         shadowSides : 0.8,
-        shadowFlip : 0.4
+        shadowFlip : 0.4,
+
+        onEndFlip : function(previousPage, currentPage, isLimit) {
+          var song = songList[currentPage];
+
+          if (song) {
+            $('.js-song').hide();
+            $(song).show();
+          }
+
+          return false;
+        }
       });
 
       $(document).on('click', '.js-next', function() {
