@@ -42,3 +42,11 @@ i.correct {
   color: steelblue;
 }
 
+
+#thanks {
+  font-family: 'Lucida Grande', sans-serif;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 100px;
+}
